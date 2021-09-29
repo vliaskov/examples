@@ -18,6 +18,9 @@ outputs:
 steps:
   - name: builder
     image: ghcr.io/fuseml/mlflow-builder:dev
+    env:
+      - name: container
+        value: 'kube'
     inputs:
       - name: mlflow-codeset
         codeset:
